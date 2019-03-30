@@ -105,3 +105,6 @@ venv.bak/
 
 #Keep data off GitHub
 /TrendLogData
+
+#Keep push script away
+push.sh
