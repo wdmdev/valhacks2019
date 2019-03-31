@@ -1,0 +1,81 @@
+from pandas import read_csv
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from matplotlib import pyplot
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# load data
+data = read_csv('###', header=0, index_col=1, parse_dates=True, squeeze=True)
+values = data.values
+            
+# determine the number of features
+n_features = data.values.shape[1]
+pyplot.figure()
+
+for i in range(1, n_features):
+	# specify the subplot
+	pyplot.subplot(n_features, 1, i)
+	# plot data 
+	pyplot.plot(data.index, data.values[:, i])
+
+	# add a readable name to the plot
+	pyplot.title(data.columns[i], y=0.5, loc='right')
+pyplot.show()
+
+
+# split data into inputs and outputs
+X, y = values[:, :-1], values[:, -1]
+# split the dataset
+trainX, testX, trainy, testy = train_test_split(X, y, test_size=0.3, shuffle=False, random_state=1)
+
+
+
+# naive prediction model
+def naive_prediction(testX, value):
+	return [value for x in range(len(testX))]
+
+# evaluate skill of predicting each class value
+for value in [0, 1]:
+	# forecast
+	yhat = naive_prediction(testX, value)
+	# evaluate
+	score = accuracy_score(testy, yhat)
+	# summarize
+	print('Naive=%d score=%.3f' % (value, score))
+    
+    
+    
+# logistic regression
+# define the model
+model = LogisticRegression()
+# fit the model on the training set
+model.fit(trainX, trainy)
+# predict the test set
+yhat = model.predict(testX)
+# evaluate model skill
+score = accuracy_score(testy, yhat)
+print(score)
+
+
+
+# basic feature selection
+features = [0, 1, 2, 3, 4]
+for f in features:
+	# split data into inputs and outputs
+	X, y = values[:, f].reshape((len(values), 1)), values[:, -1]
+	# split the dataset
+	trainX, testX, trainy, testy = train_test_split(X, y, test_size=0.3, shuffle=False, random_state=1)
+	# define the model
+	model = LogisticRegression()
+	# fit the model on the training set
+	model.fit(trainX, trainy)
+	# predict the test set
+	yhat = model.predict(testX)
+	# evaluate model skill
+	score = accuracy_score(testy, yhat)
+    # columns / features = temp., humidity, light, CO2, humidity ratio
+	print('feature=%d, name=%s, score=%.3f' % (f, data.columns[f], score))
