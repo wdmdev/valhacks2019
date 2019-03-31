@@ -13,6 +13,6 @@ You need ionic installed to run the app https://ionicframework.com/docs/v1/guide
 To run the app open the project in the terminal and type 'ionic serve'.
 
 <div align="center">
-	<img src="/img/smart_cantine1.png" width="300px"/>
+	<img src="/img/smart_cantine1.png" width="280px"/>
 	<img src="/img/smart_cantine2.png" width="300px"/>
 </div>
