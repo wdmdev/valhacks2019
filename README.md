@@ -12,5 +12,5 @@ It is intended to be a mobile application, so to get the right feel when serving
 You need ionic installed to run the app https://ionicframework.com/docs/v1/guide/installation.html
 To run the app open the project in the terminal and type 'ionic serve'.
 
-![](/img/smart_cantine1.png)
-![](/img/smart_cantine2.png)
+![](/img/smart_cantine1.png=300px)
+![](/img/smart_cantine2.png=300px)
