@@ -1,6 +1,6 @@
-$('.counter').counterUp({
-  delay: 10,
-  time: 2000
+import { CountUp } from "./countUp";
+
+$(document).ready(function () {
+  let people = new CountUp('#counter', 123);
+  people.start();
 });
-$('.counter').addClass('animated fadeInDownBig');
-$('h3').addClass('animated fadeIn');

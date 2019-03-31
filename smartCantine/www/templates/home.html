@@ -1,9 +1,8 @@
-<head>
+<ion-head>
 	<link href="../css/doughnut.css" rel="stylesheet">
 	<link href="../css/flip.css" rel="stylesheet">
 	<link href="../css/counter.css" rel="stylesheet">
-	<script src="../js/counter.js"></script>
-	<script src="../js/busyHours.js"></script>
+	<script src="js/busyHours.js"></script>
 </head>
 
 <ion-view title="Smart Cantine" id="page1" class="has-header">
@@ -22,15 +21,20 @@
 						<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 							<div class="flipper">
 								<div class="front">
-									<div class="item html" align="center">
-										<svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
-											<g>
-												<circle class="circle_animation" r="69.85699" cy="81" cx="81"
-													stroke-width="8" stroke="#6fdb6f" fill="none"></circle>
-											</g>
-										</svg>
+									<div>
+										<div align="center">
+											<h1>Busy</h1>
+										</div>
+										<div class="item html below" align="center">
+											<svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+												<g>
+													<circle class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="8" stroke="#6fdb6f"
+														fill="none"></circle>
+												</g>
+											</svg>
+										</div>
 									</div>
-								</div>
+									</div>
 								<div class="back">
 									<canvas id="busy"></canvas>
 								</div>
@@ -42,7 +46,7 @@
 
 				<div class="wrapper">
 					<i class="fa fa-users fa-2x"></i>
-					<h1><span class="counter">123</span></h1>
+					<h1><span id="counter">123</span></h1>
 					<p class="count-text ">Estimated people in the cantina</p>
 				</div>
 				</div>

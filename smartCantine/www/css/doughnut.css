@@ -44,3 +44,8 @@ svg {
 		stroke-dashoffset: 160;
 	}
 }
+
+.below {
+	position: relative;
+	z-index: 1;
+}
