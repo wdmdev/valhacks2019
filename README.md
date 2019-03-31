@@ -3,7 +3,7 @@
 ## Introduction
 Honouring the challenge set by the Valhacks team, we have decided to accept the smart campus data visualisation challenge. Although,  recognising that researchers and developers would need to dive into raw data in any case, the task comes down to a making a platform for everyday users of the campus facilities.
 Instead of creating a visual interface with data metrics, with the purpose of showcasing the Smart Campus data without any specific goal in mind, we have decided to create a tool that harbours actual value to the user and the institution simultaneously.
-Deciphering the attributes, and training validated systems, we have come to uncover a new metric: Room Occupancy. Here we illustrate one usecase example of visualizing the “Room Occupancy” Smart Campus metric: Smart Cantine
+\n Deciphering the attributes, and training validated systems, we have come to uncover a new metric: Room Occupancy. Here we illustrate one usecase example of visualizing the “Room Occupancy” Smart Campus metric: Smart Cantine
 
 ## Idea Description
 Using data on single or multiple features of temperature, CO2, light sensors and humidity from the DTU Smart Campus setup it is be possible to estimate the number of people in the cantines around campus.
