@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# load data
+# load data ### = filename (.csv or .txt)
 data = read_csv('###', header=0, index_col=1, parse_dates=True, squeeze=True)
 values = data.values
             
