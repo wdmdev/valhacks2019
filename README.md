@@ -11,3 +11,6 @@ The app is created in Angular using the ionic 1 framework.
 It is intended to be a mobile application, so to get the right feel when serving it locally run the browser in mobile view using F12 and choosing mobile design mode.
 You need ionic installed to run the app https://ionicframework.com/docs/v1/guide/installation.html
 To run the app open the project in the terminal and type 'ionic serve'.
+
+![](/img/smart_cantine1.png)
+![](/img/smart_cantine2.png)
