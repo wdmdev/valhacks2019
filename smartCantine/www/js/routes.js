@@ -9,10 +9,10 @@ angular.module('app.routes', [])
   $stateProvider
     
 
-      .state('gKBuddy', {
-    url: '/page1',
-    templateUrl: 'templates/gKBuddy.html',
-    controller: 'gKBuddyCtrl'
+      .state('home', {
+    url: '/home',
+    templateUrl: 'templates/home.html',
+    controller: 'homeCtrl'
   })
 
   .state('menuOfTheDay', {
@@ -21,7 +21,7 @@ angular.module('app.routes', [])
     controller: 'menuOfTheDayCtrl'
   })
 
-$urlRouterProvider.otherwise('/page1')
+$urlRouterProvider.otherwise('/home')
 
 
 });
